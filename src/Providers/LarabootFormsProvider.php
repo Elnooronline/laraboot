@@ -40,7 +40,8 @@ class LarabootFormsProvider extends ServiceProvider
         });
 
         $this->mergeConfigFrom(
-            $this->srcPath('config/laraboot-forms.php'), 'laraboot-forms'
+            $this->srcPath('config/laraboot-forms.php'),
+            'laraboot-forms'
         );
     }
 

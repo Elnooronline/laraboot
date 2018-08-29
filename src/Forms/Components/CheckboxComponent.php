@@ -60,7 +60,7 @@ class CheckboxComponent extends BaseComponent
     protected function viewComposer()
     {
         return [
-            'checked' => $this->checked
+            'checked' => $this->checked,
         ];
     }
 }

@@ -2,7 +2,6 @@
 
 namespace Laraboot\Forms\Components;
 
-
 use Laraboot\Contracts\Forms\Components\LocalizableComponent;
 use Laraboot\Forms\Traits\LocalizableComponent as LocalizableComponentTrait;
 

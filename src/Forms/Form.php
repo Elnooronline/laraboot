@@ -5,17 +5,17 @@ namespace Laraboot\Forms;
 use Collective\Html\FormBuilder;
 use Laraboot\Localization\Locale;
 use Laraboot\Forms\Traits\HasOpenAndClose;
+use Laraboot\Forms\Components\DateComponent;
 use Laraboot\Forms\Components\FileComponent;
 use Laraboot\Forms\Components\TextComponent;
 use Laraboot\Forms\Components\TimeComponent;
-use Laraboot\Forms\Components\DateComponent;
 use Laraboot\Forms\Components\EmailComponent;
 use Laraboot\Forms\Components\RadioComponent;
 use Laraboot\Forms\Components\NumberComponent;
 use Laraboot\Forms\Components\SelectComponent;
 use Laraboot\Forms\Components\SubmitComponent;
-use Laraboot\Forms\Components\PasswordComponent;
 use Laraboot\Forms\Components\CheckboxComponent;
+use Laraboot\Forms\Components\PasswordComponent;
 use Laraboot\Forms\Components\TextareaComponent;
 use Laraboot\Contracts\Forms\Components\LocalizableComponent;
 
@@ -129,8 +129,8 @@ class Form
     }
 
     /**
-     * @return array
      * @throws \ReflectionException
+     * @return array
      */
     public function getFormBuilderMethods()
     {
@@ -138,10 +138,11 @@ class Form
         $methods = $class->getMethods(\ReflectionMethod::IS_PUBLIC);
         $methodsList = [];
         foreach ($methods as $method) {
-            if (!starts_with($method->getName(), '__')) {
+            if (! starts_with($method->getName(), '__')) {
                 $methodsList[] = $method->getName();
             }
         }
+
         return $methodsList;
     }
 
