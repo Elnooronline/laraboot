@@ -1,17 +1,10 @@
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-    ->notPath('bootstrap/cache')
-    ->notPath('storage')
     ->notPath('vendor')
     ->in(__DIR__)
     ->name('*.php')
     ->notName('*.blade.php')
-    ->notName('.phpstorm.meta.php')
-    ->notName('_ide_helper.php')
-    ->notName('_ide_helper_models.php')
-    ->notName('server.php')
-    ->notPath('public/index.php')
     ->ignoreDotFiles(true)
     ->ignoreVCS(true);
 
