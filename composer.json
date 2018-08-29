@@ -1,0 +1,47 @@
+{
+    "name": "elnooronline/laraboot",
+    "description": "A framework for building web applications and admin panels.",
+    "keywords": ["adminpanel", "adminlte", "bootstrap", "framework", "laravel"],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.3",
+        "illuminate/support": "5.6.*",
+        "laravelcollective/html": "^5.6",
+        "ramsey/uuid": "^3.7",
+        "moontoast/math": "^1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "friendsofphp/php-cs-fixer": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laraboot\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "php-cs:issues": "vendor/bin/php-cs-fixer fix --diff --dry-run",
+        "php-cs:fix": "vendor/bin/php-cs-fixer fix"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laraboot\\Providers\\LarabootFormsProvider"
+            ],
+            "aliases": {
+                "Form": "Laraboot\\Facades\\Form"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
