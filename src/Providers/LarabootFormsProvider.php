@@ -18,8 +18,8 @@ class LarabootFormsProvider extends ServiceProvider
         $this->loadViewsFrom($this->srcPath('resources/views'), 'laraboot');
 
         $this->publishes([
-            $this->srcPath('config/laraboot-forms.php') => config_path('laraboot-forms.php'),
-        ]);
+            $this->srcPath('config/laraboot.php') => config_path('laraboot.php'),
+        ], 'laraboot-config');
 
         $this->publishes([
             $this->srcPath('resources/views/forms') => resource_path('views/vendor/laraboot/forms'),
@@ -35,14 +35,18 @@ class LarabootFormsProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->mergeConfigFrom(
+            $this->srcPath('config/laraboot.php'),
+            'laraboot'
+        );
+
         $this->app->bind('laraboot.form', function () {
             return Form::getInstance();
         });
 
-        $this->mergeConfigFrom(
-            $this->srcPath('config/laraboot-forms.php'),
-            'laraboot-forms'
-        );
+        $this->app->bind('laraboot.locales', function() {
+            return config('laraboot.locales');
+        });
     }
 
     /**

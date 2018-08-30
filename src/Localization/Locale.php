@@ -18,15 +18,19 @@ class Locale
      */
     public static function all()
     {
-        $languages = config('laraboot-forms.locales');
+        $locales = app('laraboot.locales');
 
-        foreach ($languages as $properties) {
-            $instances[] = new static($properties);
+        foreach ($locales as $locale) {
+            $instances[] = new static($locale);
         }
 
         return $instances;
     }
 
+    /**
+     * @param $name
+     * @return mixed
+     */
     public function __get($name)
     {
         return $this->properties[$name];
