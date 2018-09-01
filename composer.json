@@ -38,7 +38,7 @@
                 "Laraboot\\Providers\\LarabootServiceProvider"
             ],
             "aliases": {
-                "LarabootForm": "Laraboot\\Facades\\LarabootForm"
+                "LbForm": "Laraboot\\Facades\\LbForm"
             }
         }
     },

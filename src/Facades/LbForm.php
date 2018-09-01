@@ -4,7 +4,7 @@ namespace Laraboot\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class LarabootForm extends Facade
+class LbForm extends Facade
 {
     /**
      * Get the registered name of the component.
