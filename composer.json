@@ -35,7 +35,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Laraboot\\Providers\\LarabootFormsProvider"
+                "Laraboot\\Providers\\LarabootServiceProvider"
             ],
             "aliases": {
                 "Form": "Laraboot\\Facades\\Form"

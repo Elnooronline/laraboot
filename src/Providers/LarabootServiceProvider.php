@@ -6,7 +6,7 @@ use Laraboot\Forms\Form;
 use Illuminate\Support\ServiceProvider;
 use Laraboot\Forms\Directives\FormDirectives;
 
-class LarabootFormsProvider extends ServiceProvider
+class LarabootServiceProvider extends ServiceProvider
 {
     /**
      * Boot any application services.
