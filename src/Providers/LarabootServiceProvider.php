@@ -15,14 +15,14 @@ class LarabootServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom($this->srcPath('resources/views'), 'laraboot');
+        $this->loadViewsFrom($this->packagePath('resources/views'), 'laraboot');
 
         $this->publishes([
-            $this->srcPath('config/laraboot.php') => config_path('laraboot.php'),
+            $this->packagePath('config/laraboot.php') => config_path('laraboot.php'),
         ], 'laraboot-config');
 
         $this->publishes([
-            $this->srcPath('resources/views/forms') => resource_path('views/vendor/laraboot/forms'),
+            $this->packagePath('resources/views/forms') => resource_path('views/vendor/laraboot/forms'),
         ], 'laraboot-forms');
 
         FormDirectives::register();
@@ -36,7 +36,7 @@ class LarabootServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            $this->srcPath('config/laraboot.php'),
+            $this->packagePath('config/laraboot.php'),
             'laraboot'
         );
 
@@ -53,8 +53,8 @@ class LarabootServiceProvider extends ServiceProvider
      * @param $path
      * @return string
      */
-    private function srcPath($path)
+    private function packagePath($path)
     {
-        return __DIR__.'/../'.$path;
+        return __DIR__.'/../../'.$path;
     }
 }
