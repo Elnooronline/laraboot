@@ -5,18 +5,18 @@ return [
     /*
      * The logo of the dashboard.
      */
-    'logo' => '<b>Laravel</b> AdminLTE',
+    'logo' => '<b>Lara</b>boot',
 
 
     /*
      * The small logo of the dashboard.
      */
-    'small_logo' => '<b>Lara</b> LTE',
+    'small_logo' => '<b>L</b>b',
 
     /*
      * The name of the dashboard.
      */
-    'name' => 'Web App Name',
+    'name' => env('APP_NAME', 'Laraboot'),
 
     'appearence' => [
 
