@@ -1,1 +1,1 @@
-@extends('adminlte::auth.register')
+@extends('laraboot::panel.auth.register')

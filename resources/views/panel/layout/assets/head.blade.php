@@ -1,16 +1,16 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>{{ isset($title) ? ($title . ' | ') : null }}{{ config('adminlte.name') }}</title>
+<title>{{ isset($title) ? ($title . ' | ') : null }}{{ config('laraboot-panel.name') }}</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
-@if(config('adminlte.appearence.dir') == 'ltr')
-    <link rel="stylesheet" href="{{ url('vendor/adminlte/css/admin-lte.css') }}">
+@if(config('laraboot-panel.appearence.dir') == 'ltr')
+    <link rel="stylesheet" href="{{ url('vendor/laraboot/css/admin-lte.css') }}">
 @else
-    <link rel="stylesheet" href="{{ url('vendor/adminlte/css/admin-lte.rtl.css') }}">
+    <link rel="stylesheet" href="{{ url('vendor/laraboot/css/admin-lte.rtl.css') }}">
 @endif
 
 @stack('assets.head')

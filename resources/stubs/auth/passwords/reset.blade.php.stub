@@ -1,1 +1,1 @@
-@extends('adminlte::auth.passwords.reset')
+@extends('laraboot::panel.auth.passwords.reset')

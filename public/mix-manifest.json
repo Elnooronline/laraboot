@@ -1,9 +1,8 @@
 {
-    "/js/auth.js": "/js/auth.js?id=4adce26d82dc43a74e2a",
-    "/css/auth.css": "/css/auth.css?id=4597c541b3dee50b20cc",
-    "/css/admin-lte.css": "/css/admin-lte.css?id=371d86f1f2d8d58d725c",
-    "/js/vendor.js": "/js/vendor.js?id=f84ec5cfa5a62941c054",
+    "/js/auth.js": "/js/auth.js?id=81561a96f9e18d26e8c0",
+    "/css/auth.css": "/css/auth.css?id=7078ccb1966a53c8a333",
+    "/js/vendor.js": "/js/vendor.js?id=413039a6f4a698ef6522",
     "/js/admin-lte.js": "/js/admin-lte.js?id=3859766c89f72ca52f7f",
     "/js/laravel-adminlte.js": "/js/laravel-adminlte.js?id=ba0988f44827d5b984c8",
-    "/js/manifest.js": "/js/manifest.js?id=ae77b1a887f04f9d6119"
+    "/js/manifest.js": "/js/manifest.js?id=3856261ebef1de6b975c"
 }

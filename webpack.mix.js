@@ -4,7 +4,7 @@ require('dotenv').config({
     path: '../../.env'
 });
 
-let resourceRoot = process.env.MIX_ADMINLTE_RESOURCE_ROOT || '/vendor/adminlte/';
+let resourceRoot = process.env.MIX_ADMINLTE_RESOURCE_ROOT || '/vendor/laraboot/';
 
 const WebpackRTLPlugin = require('webpack-rtl-plugin');
 
@@ -41,6 +41,7 @@ mix.webpackConfig({
     new WebpackRTLPlugin(),
   ],
 });
+
 if (mix.inProduction()) {
     mix.version();
 }

@@ -1,8 +1,8 @@
-@extends('adminlte::layout.main')
+@extends('laraboot::panel.layout.main')
 
 @section('content')
-    @component('adminlte::page', ['title' => 'Home'])
-        @component('adminlte::box')
+    @component('laraboot::panel.page', ['title' => 'Home'])
+        @component('laraboot::panel.box')
             You're logged in!
         @endcomponent
     @endcomponent

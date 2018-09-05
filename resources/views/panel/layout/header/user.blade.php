@@ -12,7 +12,7 @@
                 {{ auth()->user()->name }}
                 @if ($created_at = auth()->user()->created_at)
                     <small>
-                        @lang('adminlte::adminlte.member_since')
+                        @lang('laraboot::adminlte.member_since')
                         <span title="{{ $created_at }}">
                             {{ $created_at->diffForHumans() }}
                         </span>
@@ -23,17 +23,17 @@
         <!-- Menu Footer-->
         <li class="user-footer">
             <div class="pull-left">
-                <a href="#" class="btn btn-default btn-flat">@lang('adminlte::adminlte.profile')</a>
+                <a href="#" class="btn btn-default btn-flat">@lang('laraboot::adminlte.profile')</a>
             </div>
             <div class="pull-right">
                 <a href="#"
                    class="btn btn-default btn-flat"
                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                >@lang('adminlte::adminlte.log_out')</a>
+                >@lang('laraboot::adminlte.log_out')</a>
 
-                <form id="logout-form" action="{{ url(config('adminlte.urls.logout', 'auth/logout')) }}" method="POST" style="display: none;">
-                    @if(config('adminlte.logout_method'))
-                        {{ method_field(config('adminlte.logout_method')) }}
+                <form id="logout-form" action="{{ url(config('laraboot-panel.urls.logout', 'auth/logout')) }}" method="POST" style="display: none;">
+                    @if(config('laraboot-panel.logout_method'))
+                        {{ method_field(config('laraboot-panel.logout_method')) }}
                     @endif
                     {{ csrf_field() }}
                 </form>

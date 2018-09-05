@@ -1,1 +1,1 @@
-@extends('adminlte::auth.passwords.email')
+@extends('laraboot::panel.auth.passwords.email')

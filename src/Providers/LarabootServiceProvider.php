@@ -62,7 +62,7 @@ class LarabootServiceProvider extends ServiceProvider
     }
 
     /**
-     * Publish views.
+     * Publish view files for forms and panel.
      */
     protected function publishViews()
     {
@@ -76,7 +76,7 @@ class LarabootServiceProvider extends ServiceProvider
     }
 
     /**
-     * Publish the auth scaffolding.
+     * Publish the scaffolding scaffolding for installing laraboot.
      *
      * @return void
      */
@@ -126,6 +126,11 @@ class LarabootServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom($this->packagePath('resources/lang'), 'laraboot');
     }
 
+    /**
+     * Load the views.
+     *
+     * @return void
+     */
     protected function loadViews()
     {
         $this->loadViewsFrom($this->packagePath('resources/views'), 'laraboot');
@@ -136,6 +141,7 @@ class LarabootServiceProvider extends ServiceProvider
      *
      * @param array $paths
      * @param null $group
+     * @return void
      */
     protected function publishes(array $paths, $group = null)
     {
