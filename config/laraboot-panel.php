@@ -41,7 +41,7 @@ return [
                 'adminlte::layout.header.notifications',
                 'adminlte::layout.header.tasks',
                 'adminlte::layout.header.user',
-                'adminlte::layout.header.logout',
+                //'adminlte::layout.header.logout',
             ],
         ],
 
