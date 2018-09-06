@@ -1,13 +1,13 @@
 <!-- User Account: style can be found in dropdown.less -->
 <li class="dropdown user user-menu">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <img src="{{ AdminLte::getGravatar(auth()->user()->email) }}" class="user-image" alt="{{ auth()->user()->name }}">
+        <img src="{{ 'https://www.gravatar.com/avatar/'.md5(auth()->user()->email) }}" class="user-image" alt="{{ auth()->user()->name }}">
         <span class="hidden-xs">{{ auth()->user()->name }}</span>
     </a>
     <ul class="dropdown-menu">
         <!-- User image -->
         <li class="user-header">
-            <img src="{{ AdminLte::getGravatar(auth()->user()->email) }}" class="img-circle" alt="{{ auth()->user()->name }}">
+            <img src="{{ 'https://www.gravatar.com/avatar/'.md5(auth()->user()->email) }}" class="img-circle" alt="{{ auth()->user()->name }}">
             <p>
                 {{ auth()->user()->name }}
                 @if ($created_at = auth()->user()->created_at)
