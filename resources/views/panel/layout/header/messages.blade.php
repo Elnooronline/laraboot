@@ -12,7 +12,7 @@
                 <li><!-- start message -->
                     <a href="#">
                         <div class="pull-left">
-                            <img src="{{ AdminLte::getGravatar(auth()->user()->email) }}" class="img-circle" alt="{{ auth()->user()->name }}">
+                            <img src="{{ 'https://www.gravatar.com/avatar/'.md5(auth()->user()->email) }}" class="img-circle" alt="{{ auth()->user()->name }}">
                         </div>
                         <h4>
                             Support Team

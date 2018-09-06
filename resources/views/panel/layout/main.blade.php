@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="{{ config('laraboot-panel.appearence.dir') }}" lang="{{ app()->getLocale() }}">
 <head>
-    @include('laraboot::layout.assets.head')
+    @include('laraboot::panel.layout.assets.head')
 </head>
 <body class="hold-transition skin-{{ config('laraboot-panel.appearence.skin') }} sidebar-mini">
 <!-- Site wrapper -->

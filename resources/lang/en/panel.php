@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'full_name' => 'Full name',
     'email' => 'Email',
     'password' => 'Password',
@@ -20,5 +19,6 @@ return [
     'reset_password' => 'Reset Password',
     'send_password_reset_link' => 'Send Password Reset Link',
     'member_since' => 'Member Since',
+    'profile' => 'Prifile',
     'online' => 'Online',
 ];

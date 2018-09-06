@@ -12,7 +12,7 @@
                 {{ auth()->user()->name }}
                 @if ($created_at = auth()->user()->created_at)
                     <small>
-                        @lang('laraboot::adminlte.member_since')
+                        @lang('laraboot::panel.member_since')
                         <span title="{{ $created_at }}">
                             {{ $created_at->diffForHumans() }}
                         </span>
@@ -23,13 +23,13 @@
         <!-- Menu Footer-->
         <li class="user-footer">
             <div class="pull-left">
-                <a href="#" class="btn btn-default btn-flat">@lang('laraboot::adminlte.profile')</a>
+                <a href="#" class="btn btn-default btn-flat">@lang('laraboot::panel.profile')</a>
             </div>
             <div class="pull-right">
                 <a href="#"
                    class="btn btn-default btn-flat"
                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                >@lang('laraboot::adminlte.log_out')</a>
+                >@lang('laraboot::panel.log_out')</a>
 
                 <form id="logout-form" action="{{ url(config('laraboot-panel.urls.logout', 'auth/logout')) }}" method="POST" style="display: none;">
                     @if(config('laraboot-panel.logout_method'))
