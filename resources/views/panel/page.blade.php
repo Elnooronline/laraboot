@@ -1,9 +1,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>
-        {{ $title }}
-        @isset($sub_title)<small>{{ $sub_title }}</small>@endisset
-    </h1>
+    @isset($title)
+        <h1>
+            {{ $title }}
+            @isset($sub_title)<small>{{ $sub_title }}</small>@endisset
+        </h1>
+    @endisset
     @isset($breadcrumb)
         @if (is_array($breadcrumb))
             {{ Breadcrumbs::render(...$breadcrumb) }}
