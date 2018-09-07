@@ -9,7 +9,7 @@
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
-            <p class="login-box-msg">@lang('laraboot::adminlte.password_reset_message')</p>
+            <p class="login-box-msg">@lang('laraboot::panel.password_reset_message')</p>
             @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status') }}
@@ -20,7 +20,7 @@
 
                 <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
                     <input type="email" name="email" class="form-control" value="{{ $email or old('email') }}"
-                           placeholder="@lang('laraboot::adminlte.email')">
+                           placeholder="@lang('laraboot::panel.email')">
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     @if ($errors->has('email'))
                         <span class="help-block">
@@ -30,7 +30,7 @@
                 </div>
                 <button type="submit"
                         class="btn btn-primary btn-block btn-flat"
-                >{{ trans('laraboot::adminlte.send_password_reset_link') }}</button>
+                >{{ trans('laraboot::panel.send_password_reset_link') }}</button>
             </form>
         </div>
         <!-- /.login-box-body -->
