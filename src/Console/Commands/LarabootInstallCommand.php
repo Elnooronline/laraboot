@@ -39,13 +39,13 @@ class LarabootInstallCommand extends Command
     {
         // Generate authentication scaffolding.
         $this->callSilent('make:auth', [
-            '--no-interaction' => true
+            '--no-interaction' => true,
         ]);
 
         // Publish the laraboot files.
         $this->callSilent('vendor:publish', [
             '--tag' => 'laraboot-scaffolding',
-            '--force' => '--force'
+            '--force' => '--force',
         ]);
 
         $this->info('laraboot was installed successfully.');

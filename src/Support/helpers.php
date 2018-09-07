@@ -14,7 +14,7 @@ if (! function_exists('css_url_active')) {
     }
 }
 
-if ( ! function_exists('css_route_active')) {
+if (! function_exists('css_route_active')) {
 
     /**
      * Generate html element class if route is equals to a given route.

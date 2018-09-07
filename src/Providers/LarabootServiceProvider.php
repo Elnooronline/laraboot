@@ -2,10 +2,10 @@
 
 namespace Laraboot\Providers;
 
-use Laraboot\Console\Commands\LarabootInstallCommand;
 use Laraboot\Forms\Form;
 use Illuminate\Support\ServiceProvider;
 use Laraboot\Forms\Directives\FormDirectives;
+use Laraboot\Console\Commands\LarabootInstallCommand;
 
 class LarabootServiceProvider extends ServiceProvider
 {
@@ -44,11 +44,11 @@ class LarabootServiceProvider extends ServiceProvider
             return Form::getInstance();
         });
 
-        $this->app->bind('laraboot.locales', function() {
+        $this->app->bind('laraboot.locales', function () {
             return config('laraboot.locales');
         });
 
-        $this->app->singleton('laraboot.manager', function() {
+        $this->app->singleton('laraboot.manager', function () {
             return new LaravelAdminLteManager(config('laraboot-panel'));
         });
     }
@@ -102,7 +102,7 @@ class LarabootServiceProvider extends ServiceProvider
             // Publish breadcrumbs.
             $this->packagePath('routes/breadcrumbs.php') => base_path('routes/breadcrumbs.php'),
             // Publish public assets.
-            $this->packagePath('public') => public_path('/vendor/laraboot')
+            $this->packagePath('public') => public_path('/vendor/laraboot'),
         ], 'laraboot-scaffolding');
     }
 
