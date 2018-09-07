@@ -2,6 +2,7 @@
 
 namespace Laraboot\Forms;
 
+use Exception;
 use Collective\Html\FormBuilder;
 use Laraboot\Localization\Locale;
 use Laraboot\Forms\Traits\HasOpenAndClose;
@@ -101,7 +102,7 @@ class Form
         }
 
         $className = __CLASS__;
-        throw new MethodNotFoundException("method {$name} not found in {$className}!", $name, $className);
+        throw new Exception("method {$name} not found in {$className}!", $name, $className);
     }
 
     /**
