@@ -2,6 +2,7 @@
 
 namespace Laraboot\Providers;
 
+use Laraboot\Console\Commands\LarabootInstallCommand;
 use Laraboot\Forms\Form;
 use Illuminate\Support\ServiceProvider;
 use Laraboot\Forms\Directives\FormDirectives;
@@ -26,6 +27,8 @@ class LarabootServiceProvider extends ServiceProvider
         $this->loadViews();
 
         $this->loadTranslations();
+
+        $this->registerCommands();
 
         FormDirectives::register();
     }
@@ -149,6 +152,17 @@ class LarabootServiceProvider extends ServiceProvider
         }
     }
 
+    /**
+     * @return void
+     */
+    private function registerCommands()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                LarabootInstallCommand::class,
+            ]);
+        }
+    }
 
     /**
      * @param $path

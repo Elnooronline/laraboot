@@ -37,11 +37,11 @@ return [
          */
         'header' => [
             'items' => [
-                'adminlte::layout.header.messages',
-                'adminlte::layout.header.notifications',
-                'adminlte::layout.header.tasks',
-                'adminlte::layout.header.user',
-                //'adminlte::layout.header.logout',
+                'laraboot::panel.layout.header.messages',
+                'laraboot::panel.layout.header.notifications',
+                'laraboot::panel.layout.header.tasks',
+                'laraboot::panel.layout.header.user',
+                //'laraboot::panel.layout.header.logout',
             ],
         ],
 
@@ -50,9 +50,9 @@ return [
          */
         'sidebar' => [
             'items' => [
-                'adminlte::layout.sidebar.user-panel',
-                'adminlte::layout.sidebar.search-form',
-                'adminlte::layout.sidebar.items',
+                'laraboot::panel.layout.sidebar.user-panel',
+                'laraboot::panel.layout.sidebar.search-form',
+                'laraboot::panel.layout.sidebar.items',
             ],
         ],
     ],
