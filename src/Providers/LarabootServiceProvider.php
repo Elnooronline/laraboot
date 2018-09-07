@@ -5,7 +5,6 @@ namespace Laraboot\Providers;
 use Laraboot\Forms\Form;
 use Illuminate\Support\ServiceProvider;
 use Laraboot\Forms\Directives\FormDirectives;
-use Elnooronline\LaravelAdminLte\LaravelAdminLteManager;
 
 class LarabootServiceProvider extends ServiceProvider
 {
