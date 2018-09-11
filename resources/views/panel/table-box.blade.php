@@ -2,8 +2,8 @@
 <div class="box{{ (isset($solid) && $solid) ? ' box-solid ' : ' '}}box-{{ $style ?? 'default' }}">
     @if (isset($title) || isset($tools))
         <div class="box-header with-border">
-            @isset($title)
-                <h3 class="box-title">{{ $title }}</h3>
+            @if(isset($title) || isset($tools))
+                <h3 class="box-title">{{ $title ?? '' }}</h3>
             @endisset
             @isset ($tools)
                 <div class="box-tools pull-right">
