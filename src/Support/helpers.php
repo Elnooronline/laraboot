@@ -51,7 +51,7 @@ if (! function_exists('css_resource_active')) {
      */
     function css_resource_active($resource, $routes = [], $className = 'active', $conditions = [])
     {
-        $routes = array_merge($routes, ['index', 'store', 'show', 'destroy', 'update', 'edit']);
+        $routes = array_merge($routes, ['index', 'create', 'show', 'edit']);
 
         if (empty($conditions)) {
             foreach ($routes as $route) {
